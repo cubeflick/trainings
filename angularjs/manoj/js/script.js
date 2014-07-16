@@ -4,3 +4,4 @@
 	});
  
  var myApp = angular.module('radioExample',[]);
+ var form = angular.module('form',[]);
