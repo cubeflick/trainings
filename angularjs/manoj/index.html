@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example1</title>
+  
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  function TodoCtrl($scope) {
+      $scope.totala = function () {
+    	  return parseFloat($scope.x) + parseFloat($scope.y);
+      };
+
+  }
+  </script>
+
+  
+</head>
+<body>
+<div ng-app="ngAppDemo">
+  <div ng-controller="ngAppDemoController">
+  I can add: {{a}} + {{c}} =  {{ a+c }}
+</div>
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="name"></p>
+<p ng-bind="name"></p>
+<br>
+<br>
+<div ng-controller="TodoCtrl">
+    <form>
+        <li>Number 1: <input type="text" ng-model="x" /> </li>
+        <li>Number 2: <input type="text" ng-model="y" /> </li>
+        <li>Total:  <label>{{totala()}}</label></li> 
+              
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
