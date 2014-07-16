@@ -2,3 +2,5 @@
 	  $scope.a = 11;
 	  $scope.c = 6;
 	});
+ 
+ var myApp = angular.module('radioExample',[]);

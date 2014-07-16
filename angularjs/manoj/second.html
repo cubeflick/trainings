@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-radio-input-directive</title>
+  
+
+   <script src="js/angular.min.js"></script>
+   <script src="js/script.js"></script>
+
+  
+</head>
+<body ng-app="radioExample">
+<h3>Showing working of a <b>MODULE</b> with nested <b>Controller</b>.</h3>
+ <div ng-controller="CarController">
+    My name is {{ name }} and I am a {{ type }}
+     <button ng-click="clickme()">Click Me</button> 
+    <div ng-controller="BMWController">
+        My name is {{ name }} and I am a {{ type }}
+  <button ng-click="clickme()">Click Me</button> 
+        <div ng-controller="BMWMotorcycleController">
+            My name is {{ name }} and I am a {{ type }}
+  <button ng-click="clickme()">Click Me</button> 
+        </div>
+    </div>
+</div>
+ 
+<script>
+function CarController($scope) {
+ 
+    $scope.name = 'Car';
+    $scope.type = 'Car';
+    $scope.clickme = function() {
+        alert('This is parent controller "CarController" calling');
+    }
+}
+ 
+function BMWController($scope) {
+ 
+    $scope.name = 'BMW';
+    $scope.clickme = function() {
+        alert('This is chiled controller "BMWController" calling');
+    }
+}
+ 
+function BMWMotorcycleController($scope) {
+ 
+    $scope.name = 'BMWMotorade';
+    $scope.type = 'Motorcycle';
+    $scope.clickme = function() {
+        alert('This is another child controller "BMWMotorcycleController" calling');
+    }
+}
+
+myApp.controller('ExampleController', ['$scope', function($scope) {
+    $scope.color = 'blue';
+    $scope.specialValue = {
+      "id": "12345",
+      "value": "green"
+    };
+  }]);
+ 
+
+ </script>
+ <h3>Showing working of a <b>Controller</b>.</h3>
+ <form name="myForm" ng-controller="ExampleController">
+   <input type="radio" ng-model="color" value="red">  Red <br/>
+   <input type="radio" ng-model="color" ng-value="specialValue"> Green <br/>
+   <input type="radio" ng-model="color" value="blue"> Blue <br/>
+   <tt>color = {{color | json}}</tt><br/>
+  </form>
+
+
+</body>
+</html>
