@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div ng-app="" ng-init="quantity=5;cost=5">
+        <p>Total in dollar: {{ quantity * cost }}</p>
+
+        <p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+</div>
+
+AngularJS Strings
+
+<div ng-app="" ng-init="firstName='jyoti';lastName='rani'">
+
+    <p>The name is {{ firstName + " " + lastName }}</p>
+
+    <p>The name is <span ng-bind="firstName + ' ' + lastName"></span></p>
+</div>
+
+
+Objects
+
+<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+
+    <p>The name is {{ person.lastName }}</p>
+
+    <p>The name is <span ng-bind="person.lastName"></span></p>
+</div>
+
+Array
+
+<div ng-app="" ng-init="points=[1,15,19,2,40]">
+
+    <p>The points are {{ points[2] }}</p>
+
+</div>
+
+
+<script src="js/angular.min.js"></script>
+</body>
+</html>

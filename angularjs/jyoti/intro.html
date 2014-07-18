@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+It extends html attributes with Directives and binds data to HTML with Expression.
+
+AngularJS extends HTML with ng-directives.
+
+The ng-app directive defines an AngularJS application.
+
+The ng-model directive binds element values (like the value of an input field) to the application.
+
+The ng-bind directive binds application data to the HTML view.
+
+<div ng-app="">
+    <p>Enter your name  <input type="text" name="fullname" ng-model="fname" /> </p>
+    <p>Your name is <span ng-bind="fname"></span> !</p>
+
+    <h3>Expressions</h3>
+    <p >My First Expression is : {{ 10 + 10 }}</p>
+</div>
+
+
+
+
+
+<script src="js/angular.min.js"></script>
+</body>
+</html>
