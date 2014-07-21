@@ -8,14 +8,14 @@ Data Binding
 Data binding in AngularJS, synchronizes AngularJS expressions with AngularJS data.
 
 {{ firstName }} is synchronized with ng-model="firstName".
-<div ng-app="" ng-init="firstName='Jyoti'">
 
-    <p>Name: <input type="text" ng-model="firstName"></p>
+<div ng-app="" ng-init="firstName='Jyoti'">
+<p>Name: <input type="text" ng-model="firstName"></p>
     <p>You wrote: {{ firstName }}</p>
 
 </div>
 
-<p ng-app="" ng-init="quantity=1;price=5">
+<p ng-app="app2" ng-init="quantity=1;price=5">
 
     Quantity: <input type="number" ng-model="quantity">
     Costs:    <input type="number" ng-model="price">
