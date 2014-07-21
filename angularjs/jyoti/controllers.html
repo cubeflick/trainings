@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div ng-app="" ng-controller="personController">
+
+    First Name: <input type="text" ng-model="person.firstName"><br>
+    Last Name: <input type="text" ng-model="person.lastName"><br>
+    <br>
+    Full Name: {{person.firstName + " " + person.lastName}}
+    <br>
+    Full Name: {{person.fullName() | lowercase}}
+    <br>
+    Full Name: {{fullNamefn() | uppercase}}
+</div>
+
+<script>
+    function personController($scope) {
+        $scope.person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                var x;
+                x = $scope.person;
+                return x.firstName + " " + x.lastName;
+            }
+        };
+        $scope.fullNamefn = function() {
+            var x;
+            x = $scope.person;
+            return x.firstName + " " + x.lastName;
+        };
+    }
+</script>
+
+<div ng-app="multi" ng-controller="costController">
+
+    <input type="number" ng-model="quantity">
+    <input type="number" ng-model="price">
+
+    <p>Total = {{ (quantity * price) | currency }}</p>
+
+</div>
+
+<script src="js/costController.js"></script>
+<div ng-app="" ng-controller="namesController">
+
+    <ul>
+        <li ng-repeat="x in names | orderBy:'country'">
+            {{ x.name + ', ' + x.country }}
+        </li>
+    </ul>
+
+    <div>
+<script>
+    function namesController($scope) {
+        $scope.names = [
+            {name:'Jani',country:'Norway'},
+            {name:'Hege',country:'Sweden'},
+            {name:'Kai',country:'Denmark'}
+        ];
+    }
+
+</script>
+    <script src="js/angular.min.js"></script>
+</body>
+</html>
