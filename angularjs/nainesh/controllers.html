@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<script src="../manoj/js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="">
+<div ng-controller="personController">
+
+    First Name: <input type="text" ng-model="person.firstName"/><br>
+    Last Name: <input type="text" ng-model="person.lastName"/><br>
+    <br>
+    Full Name: {{person.firstName + " " + person.lastName}}
+    <br>
+    Full Name: {{person.fullName() | lowercase}}
+    <br>
+    Full Name: {{fullNamefn() | uppercase}}
+</div>
+
+<script>
+    function personController($scope) {
+        $scope.person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                var x;
+                x = $scope.person;
+                return x.firstName + " " + x.lastName;
+            }
+        };
+        $scope.fullNamefn = function() {
+            var x;
+            x = $scope.person;
+            return x.firstName + " " + x.lastName;
+        };
+    }
+</script>
+
+<div ng-controller="costcntrl">
+
+Quantity:<input type="number" ng-model="quantity"/>
+Price:<input type="number" ng-model="price"/>
+<p>Total = {{ (quantity*price) | currency }}</p>
+</div>
+
+<script type="text/javascript">
+function costcntrl($scope)
+{
+$scope.quantity = 1;
+$scope.price = 5;
+}
+</script>
+
+
+<div ng-controller="namesController">
+<p>Filtering input:</p>
+
+<p><input type="text" ng-model="name"></p>
+    <ul>
+        <li ng-repeat="x in names | filter:name | orderBy:'country'">
+            {{ x.name + ', ' + x.country }}
+        </li>
+    </ul>
+</div>
+<script>
+    function namesController($scope) {
+        $scope.names = [
+            {name:'Jani',country:'Norway'},
+            {name:'Hege',country:'Sweden'},
+            {name:'Kai',country:'Denmark'}
+        ];
+    }
+
+</script>
+    
+</div>
+</body>
+</html>
