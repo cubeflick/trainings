@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="details">
+	<head>
+		<title>JSon through Employee service</title>
+		 <script src="js/angular.min.js"></script>
+		 <script src="js/angular-resource.min.js" type="text/javascript"></script>
+    	<script src="js/app.js"></script>
+    	<script src="js/services.js"></script>
+    	<script>
+    	
+    	var employees = angular.module('details', ['employeeServices']);
+        employees.controller('hello', ['$scope', 'Employee',
+    	  function($scope, Employee) {
+    	    $scope.record = Employee.query();
+    	  }]);
+    	</script>
+	</head>
+
+	<body>
+		<div ng-controller="hello">
+		<div ng-repeat="rec in record" >
+<b>{{$index + 1}}: {{rec.f_name}}  {{rec.l_name}},  {{rec.designation}} </b><br> <br> 
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>Json through $HTTP</title>
+		 <script src="js/angular.min.js"></script>
+		 <script src="js/angular-resource.min.js" type="text/javascript"></script>
+    	<script src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+		<h1>Data fetched through $http RESTful</h1>
+		<div ng-repeat="greet in greeting" >
+		<h2>{{$index + 1}}:: {{greet.f_name}} {{greet.l_name}} </h2>
+		<p>The Id is: <b>{{greet.id}}</b></p>
+			<p>The First Name is: <b>{{greet.f_name}}</b></p>
+			<p>The Last Name is: <b>{{greet.l_name}}</b></p>
+			<p>The Address is: <b>{{greet.address}}</b></p>
+			<p>The Designation is: <b>{{greet.designation}}</b></p>
+		</div>
+		</div>
+	</body>
+</html>
