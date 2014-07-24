@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Custom Plunker</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="http://code.angularjs.org/1.0.3/angular-resource.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <script src="js/services.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body ng-app="angularjs-starter" ng-controller="MainCtrl">
+<code> fvd sdf
+    {{name}}
+</code>
+<hr />
+<code>
+    {{children | json}}
+</code>
+<hr />
+<h2>children</h2>
+<div ng-repeat="child in children">
+    {{child.data}}
+</div>
+</body>
+
+</html>
