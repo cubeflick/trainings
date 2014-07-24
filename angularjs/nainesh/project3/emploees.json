@@ -1,0 +1,83 @@
+[ 
+
+{
+"id": 0,
+"firstname":"Tom",
+"lastname":"Flick",
+"address":"Noida-64 B8",
+"designation":"Founder"
+},
+
+{
+"id": 1,
+"firstname":"Manoj",
+"lastname":"Lodhi",
+"address":"Noida-64 B8",
+"designation":"developer"
+},
+
+{
+"id": 2,
+"firstname":"Sachin",
+"lastname":"Arora",
+"address":"Noida-64 B8",
+"designation":"Sales Manager"
+},
+
+{
+"id": 3,
+"firstname":"Rahul",
+"lastname":"Senger",
+"address":"Noida-64 B8",
+"designation":"Developer"
+},
+
+{
+"id": 4,
+"firstname":"Arjun",
+"lastname":"Rana",
+"address":"Noida-64 B8",
+"designation":"Manager SEO"
+},
+
+{
+"id": 5,
+"firstname":"Deepak",
+"lastname":"Singh",
+"address":"Noida-64 B8",
+"designation":"SEO"
+},
+
+{
+"id": 6,
+"firstname":"Deven",
+"lastname":"Singh",
+"address":"Noida-64 B8",
+"designation":"Marketing"
+},
+
+{
+"id": 7,
+"firstname":"Amit",
+"lastname":"chauhan",
+"address":"Noida-64 B8",
+"designation":"Co-Founder"
+},
+
+{
+"id": 8,
+"firstname":"Ajay",
+"lastname":"Pandey",
+"address":"Noida-64 B8",
+"designation":"Senior Developer"
+},
+
+{
+"id": 9,
+"firstname":"Raj",
+"lastname":"Mishra",
+"address":"Noida-64 B8",
+"designation":"Desiner"
+}
+
+]

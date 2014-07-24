@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-ng-app="employApp">
+
+  <head>
+    <title>Employ Data Management</title>
+	<script src="js/angular.js"></script>
+    <script src="js/script2.js"></script>
+  </head>
+
+  <body data-ng-controller="EmployListCtrl">
+
+    <div>
+	<ul>
+	 <li data-ng-repeat="employ in emploees">
+ <h3>{{employ.id}}{{"."}}{{" "}}{{employ.firstname}}{{" "}}{{employ.lastname}}</h3>
+ <p>{{employ.address}}{{" "}}{{","}}{{employ.designation}} </p>
+ </li>
+ </ul><br>     
+    </div>
+
+  </body>
+</html>
