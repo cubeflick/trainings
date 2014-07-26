@@ -12,15 +12,29 @@
         employees.controller('hello', ['$scope', 'Employee',
     	  function($scope, Employee) {
     	    $scope.record = Employee.query();
+              // Our form data for creating a new post with ng-model
+              $scope.postData = {};
+             //to save data
+              $scope.newPost = function() {
+                  var post = new Employee($scope.postData);
+                  post.$save();
+              }
     	  }]);
+
+
     	</script>
 	</head>
 
 	<body>
 		<div ng-controller="hello">
-		<div ng-repeat="rec in record" >
-<b>{{$index + 1}}: {{rec.f_name}}  {{rec.l_name}},  {{rec.designation}} </b><br> <br> 
-		</div>
+		    <div ng-repeat="rec in record" >
+              <b>{{$index + 1}}: {{rec.f_name}}  {{rec.l_name}},  {{rec.designation}} </b><br> <br>
+		    </div>
+            <form ng-submit="newPost()">
+                <label>New Post:</label>
+                <textarea ng-model="postData.text"></textarea>
+                <button type="submit" class="button button-positive button-block">Create</button>
+            </form>
 		</div>
 	</body>
 </html>
