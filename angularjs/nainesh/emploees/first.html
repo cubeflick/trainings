@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<script>
+var text = '{ "employees" : [' +
+'{"firstname":"Tom","lastname":"Flick","address":"Noida B 8","designation":"Founder"},'+
+'{"firstname":"Manoj","lastname":"Lodhi","address":"Noida B 8","designation":"developer"},'+
+'{"firstname":"Sachin","lastname":"Arora","address":"Noida B 8","designation":"Sales Manager"},'+
+'{"firstname":"Rahul","lastname":"Senger","address":"Noida B 8","designation":"Developer"},'+
+'{"firstname":"Arjun","lastname":"Rana","address":"Noida B 8","designation":"Manager SEO"},'+
+'{"firstname":"Deepak","lastname":"Singh","address":"Noida B 8","designation":"SEO"},'+
+'{"firstname":"Deven","lastname":"Singh","address":"Noida B 8","designation":"Marketing"},'+
+'{"firstname":"Amit","lastname":"chauhan","address":"Noida B 8","designation":"Co-Founder"},'+
+'{"firstname":"Ajay","lastname":"Pandey","address":"Noida B 8","designation":"Senior Developer"},'+
+'{"firstname":"Raj","lastname":"Mishra","address":"Noida B 8","designation":"Desiner"}]}';
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.employees[0].firstname + " " + obj.employees[0].lastname + " " +  "," + obj.employees[0].address + " " + "," +  obj.employees[0].designation + "<br>" + "<br>" +
+obj.employees[1].firstname + " " + obj.employees[1].lastname +  " " +  "," +obj.employees[1].address + " " + "," + obj.employees[1].designation + "<br>" + "<br>" +
+obj.employees[2].firstname + " " + obj.employees[2].lastname + " " +  "," +obj.employees[2].address + " " + "," + obj.employees[2].designation + "<br>" + "<br>" +
+obj.employees[3].firstname + " " + obj.employees[3].lastname + " " +  "," +obj.employees[3].address + " " + "," + obj.employees[3].designation + "<br>" + "<br>" +
+obj.employees[4].firstname + " " + obj.employees[4].lastname + " " +  "," +obj.employees[4].address + " " + "," + obj.employees[4].designation + "<br>" + "<br>" +
+obj.employees[5].firstname + " " + obj.employees[5].lastname + " " +  "," +obj.employees[5].address + " " + "," + obj.employees[5].designation + "<br>" + "<br>" +
+obj.employees[6].firstname + " " + obj.employees[6].lastname + " " +  "," +obj.employees[6].address + " " + "," + obj.employees[6].designation + "<br>" + "<br>" +
+obj.employees[7].firstname + " " + obj.employees[7].lastname + " " +  "," +obj.employees[7].address + " " + "," + obj.employees[7].designation + "<br>" + "<br>" +
+obj.employees[8].firstname + " " + obj.employees[8].lastname + " " +  "," +obj.employees[8].address + " " + "," + obj.employees[8].designation + "<br>" + "<br>" +
+obj.employees[9].firstname + " " + obj.employees[9].lastname + " " +  "," + obj.employees[9].address + " " + "," + obj.employees[9].designation;
+ 
+
+</script>
+
+</body>
+</html>
