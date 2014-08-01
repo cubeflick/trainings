@@ -3,4 +3,5 @@ function Hello($scope, $http) {
         success(function(data) {
             $scope.greeting = data;
         });
+  
 }

@@ -83,6 +83,11 @@ function InstantSearchController($scope){
 		},
 		{
 			url: 'search.html',
+			title: 'this is new demo',
+			image: 'images/image1.jpg'
+		},
+		{
+			url: 'search.html',
 			title: 'Your First Backbone.js App – Service Chooser',
 			image: 'images/image1.jpg'
 		}
